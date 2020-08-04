@@ -1,0 +1,25 @@
+/* Escreva uma classe chamada Pessoa que deverá ter os seguintes atributos: nome (do tipo String), idade (do tipo int) e conjuge (do tipo Pessoa). 
+Esses três atributos não devem ser static (ou seja, serão atributos dos objetos). 
+Escreva dois construtores para essa classe: o primeiro deverá receber dois parâmetros: uma variável do tipo String chamada nome e uma variável do tipo int chamada idadeEmAnos. 
+Este construtor deverá colocar os valores recebidos em seus parâmetros nos respectivos atributos da classe (ou, especificamente, do objeto), 
+o atributo conjuge deverá receber o valor null. 
+O segundo construtor receberá três parâmetros: uma variável do tipo String chamada nome, uma variável do tipo int chamada idade e uma variável do tipo Pessoa chamada conjuge. 
+Este construtor deverá chamar o construtor implementado anteriormente para o preenchimento dos atributos nome e idade e, em seguida,
+colocar no atributo conjuge o valor recebido no parâmetro conjuge. */
+
+class Pessoa{
+	
+	String nome;
+	int idade;
+	Pessoa conjuge;
+
+	Pessoa(String nome, int idadeEmAnos){
+		this.nome = nome; 
+		this.idade = idadeEmAnos; 
+		this.conjuge = null;
+	}
+	Pessoa(String nome, int idade, Pessoa conjuge){
+		this(nome,idade);
+		this.conjuge = conjuge;
+	}
+}
